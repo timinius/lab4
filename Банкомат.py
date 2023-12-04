@@ -1,7 +1,8 @@
-print('Введите сумму:')
+print('Введите сумму (до 999999):')
 summ = int(input())
 if summ > 999999:
     print('Программа не работает с числами больше 999 999')
+    exit()
 
 c6 = summ // 100000
 c5 = (summ % 100000) // 10000
@@ -219,4 +220,6 @@ if summ < 1000:
     thousand = ''
 
 text = c6t + c5t + c4t + thousand + c3t + c2t + c1t + ending
+if summ == 0:
+    text = 'ноль рублей'
 print('Ваша сумма: ' + text.capitalize())
